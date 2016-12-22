@@ -72,7 +72,7 @@ There are three functions you can perform on DataGraft:
 A file page (see Figure 3) contains information about the file assets such as file name, description, owner, last modified date, upload date, license, download link, file size.
 The filestore asset is used for storing and sharing tabular data. The data can be in Excel or CSV formats. Administration of metadata and sharing files with other users as public data is provided in the DataGraft GUI.
 
-Below is the step-by-step guide for Creating Filepage on DataGraft.
+For creating a filepage, you can either upload a new file or choose an existing file. Below is the step-by-step guide for Creating Filepage on DataGraft.
 
 ![Create File Page by Uploading New File](/static/images/documentation/1.5create_file_page_uploaded_file.png)
 <p align="center">Figure 3: Create Filepage by uploading a new file</p>
