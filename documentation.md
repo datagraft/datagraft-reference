@@ -7,8 +7,8 @@ weight: 2
 [Download pdf](/static/images/documentation/DataGraft.pdf)
 
 
-1. [Components in DataGraft](#components_datagraft)
-2. [Data pages](#data_pages)
+1. [Components in DataGraft](#datagraft_components)
+2. [DataGraft Homepage](#datagraft_homepage)
 3. [Exploring public transformations](#explore)
 3. [User registration](#user_registration)
 4. [Dashboard](#dashboard)
@@ -44,13 +44,15 @@ weight: 2
       * [Scatter chart](#scatterchart)
       * [Map](#map)
 
-### <a name="components_datagraft"></a>Components in DataGraft
+### <a name="datagraft_homepage"></a>Components in DataGraft
 DataGraft consits of the following components:
-* DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model as described in D2.2 and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services, which are described in more detail in Section 3.
+* DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services.
 * DataGraft DBMS: This component represents the database management system (PostgreSQL4) for the user data and asset catalogue. Data are stored in a separate volume (Docker volume or Amazon S35 in production).
 
+### <a name="datagraft_homepage"></a>DataGraft Homepage
+The new home page contains two tabs that allows users to browse or create assets. The "Browse Assets" tab (see Figure 1) presents a list of available assets (files, SPARQL endpoints, data transformation and queries) and corresponding filter options for the type of assets. Users can also search assets by name and include other users' public assets.
 
-
+![Transformations in DataGraft](/static/images/documentation/datagraft_homepage.png)
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
