@@ -12,7 +12,7 @@ weight: 2
 3. [DataGraft Homepage - Create Assets](#datagraft_homepage_create_assets)
 4. [DataGraft Main Functions](#datagraft_main_functions)
 5. [Create File Page](#create_file_page)
-4. [Dashboard](#dashboard)
+4. [Create SPARQL End Point Page](#create_sparql_end_point_page)
 5. [The workflow overview](#workflow) 
 6. [Publishing data](#publish)
 7. [Data cleaning and transformation](#transform)
@@ -86,7 +86,7 @@ For creating a filepage, you can either upload a new file or choose an existing 
 ![Finish File Page](/static/images/documentation/1.7finished_file_store.png)
 <p align="center">Figure 6: Finished File Page</p>
 
-
+### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
