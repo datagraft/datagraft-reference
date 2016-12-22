@@ -9,8 +9,9 @@ weight: 2
 
 1. [Components in DataGraft](#datagraft_components)
 2. [DataGraft Homepage - Browse Assets](#datagraft_homepage_browse_assets)
-3. [DataGraft Homepage - Crowse Assets](#datagraft_homepage_create_assets)
-3. [User registration](#user_registration)
+3. [DataGraft Homepage - Create Assets](#datagraft_homepage_create_assets)
+4. [DataGraft Main Functions](#datagraft_main_functions)
+5. [Create File Page](#create_file_page)
 4. [Dashboard](#dashboard)
 5. [The workflow overview](#workflow) 
 6. [Publishing data](#publish)
@@ -60,6 +61,30 @@ The "Create Assets" tab (see Figure 2) enables users to create assets. A step-by
 
 ![DataGraft Homepage Create Assets](/static/images/documentation/datagraft_homepage_create.png)
 <p align="center">Figure 2: DataGraft homepage -create assets</p>
+
+### <a name="datagraft_main_functions"></a>DataGraft Main Functions
+There are three functions you can perform on DataGraft:
+* Create File Page
+* Create SPARQL End Point Page
+* SPARQL query
+
+### <a name="create_file_page"></a>Create File Page
+A file page (see Figure 3) contains information about the file assets such as file name, description, owner, last modified date, upload date, license, download link, file size.
+The filestore asset is used for storing and sharing tabular data. The data can be in Excel or CSV formats. Administration of metadata and sharing files with other users as public data is provided in the DataGraft GUI.
+
+![Create File Page by Uploading New File](/static/images/documentation/1.5create_file_page_uploaded_file.png)
+<p align="center">Figure 3: Create Filepage by uploading a new file</p>
+
+![Create File Page With Existing File](/static/images/documentation/1.4create_file_page_exist_file.png)
+<p align="center">Figure 4: Create Filepage by uploading a new file</p>
+
+![Edit File Metadata](/static/images/documentation/1.6edit_metadata_file.png)
+<p align="center">Figure 5: Edit File Metadata</p>
+
+![Finish File Page](/static/images/documentation/1.7finished_file_store.png)
+<p align="center">Figure 6: Finished File Page</p>
+
+
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
