@@ -45,7 +45,9 @@ weight: 2
       * [Map](#map)
 
 
-This user guide describes a core functionality of the service and provides you with detailed step-by-step explanation of data publishing and transformation process with help of DataGraft portal. The most demonstrable way to get an overview of what can be done with help of DataGraft platform is to explore data pages and data transformations that other users of this platform chose to share. You can do it here [https://datagraft.net/pages/catalogs/](https://datagraft.net/pages/catalogs/) (sign in is required). The two terms mentioned above, **data pages** and **data transformations**, are two main concepts you work with while using DataGraft platform, therefore it may be useful to understand what each of them means in a context of the service. 
+DataGraft consits of the following components:
+* DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model as described in D2.2 and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services, which are described in more detail in Section 3.
+* DataGraft DBMS: This component represents the database management system (PostgreSQL4) for the user data and asset catalogue. Data are stored in a separate volume (Docker volume or Amazon S35 in production).
 
 
 
