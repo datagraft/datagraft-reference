@@ -78,7 +78,7 @@ For creating a filepage, you can either upload a new file or choose an existing 
 <p align="center">Figure 3: Create Filepage by uploading a new file</p>
 
 ![Create File Page With Existing File](/static/images/documentation/1.4create_file_page_exist_file.png)
-<p align="center">Figure 4: Create Filepage by uploading a new file</p>
+<p align="center">Figure 4: Create Filepage by choosing an existing file</p>
 
 ![Edit File Metadata](/static/images/documentation/1.6edit_metadata_file.png)
 <p align="center">Figure 5: Edit File Metadata</p>
