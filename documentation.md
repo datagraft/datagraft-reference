@@ -7,7 +7,7 @@ weight: 2
 [Download pdf](/static/images/documentation/DataGraft.pdf)
 
 
-1. [Data transformations](#data_transformations)
+1. [Components in DataGraft](#components_datagraft)
 2. [Data pages](#data_pages)
 3. [Exploring public transformations](#explore)
 3. [User registration](#user_registration)
@@ -44,7 +44,7 @@ weight: 2
       * [Scatter chart](#scatterchart)
       * [Map](#map)
 
-
+### <a name="components_datagraft"></a>Components in DataGraft
 DataGraft consits of the following components:
 * DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model as described in D2.2 and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services, which are described in more detail in Section 3.
 * DataGraft DBMS: This component represents the database management system (PostgreSQL4) for the user data and asset catalogue. Data are stored in a separate volume (Docker volume or Amazon S35 in production).
