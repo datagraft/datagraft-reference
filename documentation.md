@@ -101,9 +101,6 @@ A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9)
 ![Query SPARQL Endpoint](/static/images/documentation/query_sparql_endpoint.png)
 <p align="center">Figure 10: Query SPARQL Endpoint</p>
 
-### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
-A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9) displays information such as description, keywords, license, provision date and the size of the data.
-
 ### <a name="add_sparql_query"></a>Add SPARQL Query
 A query page (see Figure 16) displays information about the query – query textual description, query text, and the SPARQL endpoints that are associated with this query. The user has the option to navigate to the endpoint page or select the endpoint and execute the query. Results are displayed in a results table.
 
