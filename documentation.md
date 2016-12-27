@@ -13,7 +13,7 @@ weight: 2
 4. [DataGraft Main Functions](#datagraft_main_functions)
 5. [Create File Page](#create_file_page)
 4. [Create SPARQL End Point Page](#create_sparql_end_point_page)
-5. [The workflow overview](#workflow) 
+5. [SPARQL Query](#add_sparql_query) 
 6. [Publishing data](#publish)
 7. [Data cleaning and transformation](#transform)
    * [Transformation metadata](#transform_meta)
