@@ -104,6 +104,15 @@ A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9)
 ### <a name="add_sparql_query"></a>Add SPARQL Query
 A query page (see Figure 16) displays information about the query – query textual description, query text, and the SPARQL endpoints that are associated with this query. The user has the option to navigate to the endpoint page or select the endpoint and execute the query. Results are displayed in a results table.
 
+![Finish SPARQL Endpoint](/static/images/documentation/sparql_query1.png)
+<p align="center">Figure 11: Add SPARQL Query Details</p>
+
+![Query SPARQL Endpoint](/static/images/documentation/sparql_query2.png)
+<p align="center">Figure 12: Query SPARQL Endpoint</p>
+
+![Query SPARQL Endpoint](/static/images/documentation/sparql_query3.png)
+<p align="center">Figure 12: Publish</p>
+
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
 
