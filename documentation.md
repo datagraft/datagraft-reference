@@ -56,6 +56,7 @@ DataGraft consits of the following components:
 
 ### <a name="platform_enhancements"></a>Platform Enhancements
 * Data Cleaning and Transformation
+
 The Grafterizer tool, an interactive tool for data cleaning and data transformation, was initially developed to support general-purpose data cleaning and transformation operations so that it could be applied in many different settings. We identified a set of property data domain-specific requirements related to the support for the Shapefile format. Shapefile18 is a popular geospatial vector data format for geographic information system (GIS) software. The Shapefile format can spatially describe vector features, such as points, lines, and polygons in different coordinate projections.
 
 Since most of the input datasets for the business cases in the proDataMarket project use this format, in the second period we spent effort to provide support for using it. Two main aspects have been implemented in Grafterizer for that purpose:
