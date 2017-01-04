@@ -69,7 +69,7 @@ DataGraft consits of the following components:
 The new home page contains two tabs that allows users to browse or create assets. The "Browse Assets" tab (see Figure 1) presents a list of available assets (files, SPARQL endpoints, data transformation and queries) and corresponding filter options for the type of assets. Users can also search assets by name and include other users' public assets.
 
 ![DataGraft Homepage Browse Assets](/static/images/documentation/datagraft_homepage_browse.png)
-<p align="center">Figure 1: DataGraft homepage - browse assets</p>
+<p align="center">Figure 2: DataGraft homepage - browse assets</p>
 
 ### <a name="datagraft_homepage_create_assets"></a>DataGraft Homepage - Create Assets
 The "Create Assets" tab (see Figure 2) enables users to create assets. A step-by-step wizard guides the user in creating a file page, allowing the user to upload a new file or use an existing file, and start the Grafterizer tool to clean and transform the selected files. Similarly, a step-by-step wizard guides the user in creating a SPARQL endpoint page, allowing the user to upload RDF data, provision a SPARQL endpoint for storing and accessing the data, or use Grafterizer to transform a tabular data file.
