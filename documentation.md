@@ -47,7 +47,7 @@ weight: 2
       * [Scatter chart](#scatterchart)
       * [Map](#map)
 
-### <a name="datagraft_platform"></a>proDataMarket Platform
+### <a name="proDataMarket_platform"></a>proDataMarket Platform
 proDataMarket is a digital data marketplace for open and non-open property and related contextual data, with the ambition of making it easier for property-related data providers to publish and distribute their data and for data consumers to easily access the data they need for their businesses. 
 
 The two core elements of proDataMarket marketplace are:
