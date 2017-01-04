@@ -57,9 +57,9 @@ DataGraft is a cloud-based service, which provides an integrated web environment
 * proDataMarket portal 
 proDataMarket portal is built for potential consumers of this data by providing added-value services on top of the platform for 1) distribution and monetization of property-related datasets to 3rd parties, and 2) data augmentation, visualization, and easy access to and discovery of the property- related datasets by data consumers.
 
-<p align="center">
+
 ![proDataMarket marketplace](/static/images/documentation/proDM.png)
-Figure 1: proDataMarket Platform and DaaS Services components within the marketplace</p>
+<p align="center">Figure 1: proDataMarket Platform and DaaS Services components within the marketplace</p>
 
 ### <a name="datagraft_homepage"></a>Components in DataGraft
 DataGraft consits of the following components:
