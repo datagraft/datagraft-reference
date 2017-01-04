@@ -67,7 +67,8 @@ A large portion of the input Shapefiles contains descriptions of various charact
 The need to support coordinate projection normalisation operations comes from the fact that Shapefile exports are often done with the local settings of the respective GIS system that contains the initial data. Most often, the output coordinate projection is the Universal Transverse Mercator (UTM) system, whereby Earth is divided into sixty zones and each projection is unique within each hemisphere/zone combination. This arrangement allows the UTM coordinate system to have better precision than the more widely used latitude/longitude-based World Geodetic System 1984 (WGS84) projection system. However, in most cases it is desirable to use the WGS84 system for interoperability purposes, including the case of the GeoSPARQL format, used by the DBaaS component of the platform.
 
 Therefore, in Grafterizer, we implemented a simple user interface to support the conversion based on the hemisphere and zone number, as shown in Figure 5.
-![DataGraft Homepage Browse Assets](/static/images/documentation/proDM_coordinates.png)
+
+![Grafterizer Coordinates](/static/images/documentation/proDM_coordinates.png)
 <p align="center">Figure 2: Coordinate projections transformation in Grafterizer</p>
 
 The user needs to select the column that contains the coordinates, and the zone number (integer between 0 and 60) of the respective UTM projection, and all UTM easting/northing coordinates within the column are automatically converted to latitude/longitude pairs. The implementation uses extracted parts of the recently open-sourced WorldWind library20 by NASA, which have been integrated into the Grafterizer library and implemented in the Graftwerk back-end.
