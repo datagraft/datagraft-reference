@@ -7,6 +7,8 @@ weight: 2
 [Download pdf](/static/images/documentation/DataGraft.pdf)
 
 
+
+1. [DataGraft Platform](#datagraft_platform)
 1. [Components in DataGraft](#datagraft_components)
 2. [DataGraft Homepage - Browse Assets](#datagraft_homepage_browse_assets)
 3. [DataGraft Homepage - Create Assets](#datagraft_homepage_create_assets)
@@ -44,6 +46,9 @@ weight: 2
       * [Pie chart](#piechart)
       * [Scatter chart](#scatterchart)
       * [Map](#map)
+
+### <a name="datagraft_platform"></a>DataGraft Platform
+DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). All functionalities that DataGraft provides are programmatically available through a set of REST-based APIs.
 
 ### <a name="datagraft_homepage"></a>Components in DataGraft
 DataGraft consits of the following components:
