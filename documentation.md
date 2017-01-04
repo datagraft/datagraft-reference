@@ -46,7 +46,7 @@ weight: 2
       * [Scatter chart](#scatterchart)
       * [Map](#map)
 
-### <a name="datagraft_homepage"></a>Components in DataGraft
+### <a name="datagraft_components"></a>Components in DataGraft
 DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). DataGraft provides a user interface that enables user data and account management, user assets cataloguing and dataset and database management.
 
 DataGraft consits of the following components:
