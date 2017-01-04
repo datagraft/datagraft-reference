@@ -9,6 +9,7 @@ weight: 2
 
 
 1. [Components in DataGraft](#datagraft_components)
+2. [Platform Enhancements](#platform_enhancements)
 2. [DataGraft Homepage - Browse Assets](#datagraft_homepage_browse_assets)
 3. [DataGraft Homepage - Create Assets](#datagraft_homepage_create_assets)
 4. [DataGraft Main Functions](#datagraft_main_functions)
@@ -52,6 +53,28 @@ DataGraft is a cloud-based service, which provides an integrated web environment
 DataGraft consits of the following components:
 * DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services.
 * DataGraft DBMS: This component represents the database management system (PostgreSQL4) for the user data and asset catalogue. Data are stored in a separate volume (Docker volume or Amazon S35 in production).
+
+### <a name="platform_enhancements"></a>Platform Enhancements
+* Data Cleaning and Transformation
+The Grafterizer tool, an interactive tool for data cleaning and data transformation, was initially developed to support general-purpose data cleaning and transformation operations so that it could be applied in many different settings. We identified a set of property data domain-specific requirements related to the support for the Shapefile format. Shapefile18 is a popular geospatial vector data format for geographic information system (GIS) software. The Shapefile format can spatially describe vector features, such as points, lines, and polygons in different coordinate projections.
+
+Since most of the input datasets for the business cases in the proDataMarket project use this format, in the second period we spent effort to provide support for using it. Two main aspects have been implemented in Grafterizer for that purpose:
+- explicit support for the Shapefile format in the interactive user interface of Grafterizer, and
+- support for operations to normalise the coordinate projection systems across the various inputs.
+
+A large portion of the input Shapefiles contains descriptions of various characteristics of the landscape or environment, whereby facts are not always represented as individual entities and, therefore, need to be reformatted/transformed into ones. In order to implement support for the Shapefile format, while still enabling the necessary data cleaning and transformation operations, the user interface imports the Shapefiles directly or using a ZIP19 archive that contains (at minimum) the feature geometry (SHP) and shape index (SHX) files of the input Shapefile. These are then converted by the Graftwerk back-end into a single tabular file allowing it to be loaded in the interactive GUI of Grafterizer and then cleaned up and further transformed as appropriate.
+
+The need to support coordinate projection normalisation operations comes from the fact that Shapefile exports are often done with the local settings of the respective GIS system that contains the initial data. Most often, the output coordinate projection is the Universal Transverse Mercator (UTM) system, whereby Earth is divided into sixty zones and each projection is unique within each hemisphere/zone combination. This arrangement allows the UTM coordinate system to have better precision than the more widely used latitude/longitude-based World Geodetic System 1984 (WGS84) projection system. However, in most cases it is desirable to use the WGS84 system for interoperability purposes, including the case of the GeoSPARQL format, used by the DBaaS component of the platform.
+
+Therefore, in Grafterizer, we implemented a simple user interface to support the conversion based on the hemisphere and zone number, as shown in Figure 5.
+![DataGraft Homepage Browse Assets](/static/images/documentation/proDM_coordinates.png)
+<p align="center">Figure 2: Coordinate projections transformation in Grafterizer</p>
+
+The user needs to select the column that contains the coordinates, and the zone number (integer between 0 and 60) of the respective UTM projection, and all UTM easting/northing coordinates within the column are automatically converted to latitude/longitude pairs. The implementation uses extracted parts of the recently open-sourced WorldWind library20 by NASA, which have been integrated into the Grafterizer library and implemented in the Graftwerk back-end.
+
+Apart from the support for geospatial data, the Grafterizer interactive user interface has been updated to support Excel spreadsheets. This is done through a separate data import step in the pipeline, which allows to interchange the input format, which is used in the transformation script of any given transformation.
+
+* Portal Wireframes and Flow
 
 ### <a name="datagraft_homepage_browse_assets"></a>DataGraft Homepage - Browse Assets
 The new home page contains two tabs that allows users to browse or create assets. The "Browse Assets" tab (see Figure 1) presents a list of available assets (files, SPARQL endpoints, data transformation and queries) and corresponding filter options for the type of assets. Users can also search assets by name and include other users' public assets.
