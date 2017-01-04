@@ -8,7 +8,7 @@ weight: 2
 
 
 
-1. [DataGraft Platform](#datagraft_platform)
+1. [proDataMarketPlatform](#proDataMarket_platform)
 1. [Components in DataGraft](#datagraft_components)
 2. [DataGraft Homepage - Browse Assets](#datagraft_homepage_browse_assets)
 3. [DataGraft Homepage - Create Assets](#datagraft_homepage_create_assets)
@@ -47,8 +47,18 @@ weight: 2
       * [Scatter chart](#scatterchart)
       * [Map](#map)
 
-### <a name="datagraft_platform"></a>DataGraft Platform
-DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). All functionalities that DataGraft provides are programmatically available through a set of REST-based APIs.
+### <a name="datagraft_platform"></a>proDataMarket Platform
+proDataMarket is a digital data marketplace for open and non-open property and related contextual data, with the ambition of making it easier for property-related data providers to publish and distribute their data and for data consumers to easily access the data they need for their businesses. 
+
+The two core elements of proDataMarket marketplace are:
+* proDataMarket platform (DataGraft and Grafterizer) and DaaS services (the Semantic Graph database)
+DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). DataGraft provides a user interface that enables user data and account management, user assets cataloguing and dataset and database management, whereas Grafterizer is an interactive tool for data cleaning and data transformation. DaaS services is a scalable elastic RDF database cluster responsible for providing efficient and reliable access to large amounts of data. The database service scales up and down to accommodate the demand for working with large amount of data and intensive data access traffic in cost-efficient way.
+
+* proDataMarket portal 
+proDataMarket portal is built for potential consumers of this data by providing added-value services on top of the platform for 1) distribution and monetization of property-related datasets to 3rd parties, and 2) data augmentation, visualization, and easy access to and discovery of the property- related datasets by data consumers.
+
+![proDataMarket marketplace](/static/images/documentation/proDM.png)
+<p align="center">Figure 1: proDataMarket Platform and DaaS Services components within the marketplace</p>
 
 ### <a name="datagraft_homepage"></a>Components in DataGraft
 DataGraft consits of the following components:
