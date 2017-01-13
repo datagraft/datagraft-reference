@@ -14,11 +14,8 @@ weight: 2
       * [Create SPARQL End Point Page](#create_sparql_end_point_page)      
       * [SPARQL query](#add_sparql_query)
    
-4. [Create File Page](#create_file_page)
-5. [Create SPARQL End Point Page](#create_sparql_end_point_page)
-6. [SPARQL Query](#add_sparql_query) 
-7. [Publishing data](#publish)
-8. [Data cleaning and transformation](#transform)
+3. [Publishing data](#publish)
+4. [Data cleaning and transformation](#transform)
    * [Transformation metadata](#transform_meta)
    * [Transformation preview](#transform_preview)
    * [Constructing transformation pipeline](#transform_pipeline)
