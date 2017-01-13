@@ -12,7 +12,6 @@ weight: 2
 2. [DataGraft Homepage](#datagraft_homepage)
    * [Browse Assets](#browse_assets) 
    * [Create Assets](#create_assets)  
-3. [DataGraft Main Functions](#datagraft_main_functions)
 4. [Create File Page](#create_file_page)
 5. [Create SPARQL End Point Page](#create_sparql_end_point_page)
 6. [SPARQL Query](#add_sparql_query) 
@@ -58,8 +57,7 @@ The "Create Assets" tab (see Figure 2) enables users to create assets. A step-by
 ![DataGraft Homepage Create Assets](/static/images/documentation/datagraft_homepage_create.png)
 <p align="center">Figure 2: DataGraft homepage -create assets</p>
 
-### <a name="datagraft_main_functions"></a>DataGraft Main Functions
-There are three functions you can perform on DataGraft:
+The three main functions you can perform under Create Assets are:
 * Create File Page
 * Create SPARQL End Point Page
 * SPARQL query
