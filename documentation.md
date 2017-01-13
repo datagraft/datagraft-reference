@@ -12,8 +12,7 @@ weight: 2
    * [Create Assets](#create_assets)
       * [Create File Page](#create_file_page)      
       * [Create SPARQL End Point Page](#create_sparql_end_point_page)      
-      * [SPARQL query](#add_sparql_query)
-   
+      * [SPARQL query](#add_sparql_query)   
 3. [Publishing data](#publish)
 4. [Data cleaning and transformation](#transform)
    * [Transformation metadata](#transform_meta)
