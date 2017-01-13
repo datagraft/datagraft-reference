@@ -6,12 +6,14 @@ weight: 2
 ---
 [Download pdf](/static/images/documentation/DataGraft.pdf)
 
-
-
 1. [Components in DataGraft](#datagraft_components)
 2. [DataGraft Homepage](#datagraft_homepage)
    * [Browse Assets](#browse_assets) 
-   * [Create Assets](#create_assets)  
+   * [Create Assets](#create_assets)
+      * [Create File Page](#create_file_page)      
+      * [Create SPARQL End Point Page](#create_sparql_end_point_page)      
+      * [SPARQL query](#add_sparql_query)
+   
 4. [Create File Page](#create_file_page)
 5. [Create SPARQL End Point Page](#create_sparql_end_point_page)
 6. [SPARQL Query](#add_sparql_query) 
