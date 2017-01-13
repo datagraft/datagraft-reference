@@ -36,21 +36,21 @@ weight: 2
    * [Building RDF mapping](#rdf)      
    * [Executing transformation](#apply)      
 
-### <a name="datagraft_components"></a>Components in DataGraft
+## <a name="datagraft_components"></a>Components in DataGraft
 DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). DataGraft provides a user interface that enables user data and account management, user assets cataloguing and dataset and database management.
 
 DataGraft consits of the following components:
 * DataGraft portal: The portal serves several functions. Firstly, it provides the web-based front- end that is used by the proDataMarket data publishers. Internally, it implements the data model and provides object-relational mapping between it and the database back-end. It also enables the communication with the database and manages the storage of uploaded files (Docker volume, or Amazon RDS3 in production). Finally, this component implements the connection to the data hosting and access services.
 * DataGraft DBMS: This component represents the database management system (PostgreSQL4) for the user data and asset catalogue. Data are stored in a separate volume (Docker volume or Amazon S35 in production).
 
-### <a name="datagraft_homepage"></a>DataGraft Homepage
-#### <a name="browse_assets"></a>Browse Assets
+## <a name="datagraft_homepage"></a>DataGraft Homepage
+### <a name="browse_assets"></a>Browse Assets
 The new home page contains two tabs that allows users to browse or create assets. The "Browse Assets" tab (see Figure 1) presents a list of available assets (files, SPARQL endpoints, data transformation and queries) and corresponding filter options for the type of assets. Users can also search assets by name and include other users' public assets.
 
 ![DataGraft Homepage Browse Assets](/static/images/documentation/datagraft_homepage_browse.png)
 <p align="center">Figure 1: DataGraft homepage - browse assets</p>
 
-#### <a name="create_assets"></a>Create Assets
+### <a name="create_assets"></a>Create Assets
 The "Create Assets" tab (see Figure 2) enables users to create assets. A step-by-step wizard guides the user in creating a file page, allowing the user to upload a new file or use an existing file, and start the Grafterizer tool to clean and transform the selected files. Similarly, a step-by-step wizard guides the user in creating a SPARQL endpoint page, allowing the user to upload RDF data, provision a SPARQL endpoint for storing and accessing the data, or use Grafterizer to transform a tabular data file.
 
 ![DataGraft Homepage Create Assets](/static/images/documentation/datagraft_homepage_create.png)
@@ -61,7 +61,7 @@ The three main functions you can perform under Create Assets are:
 * Create SPARQL End Point Page
 * SPARQL query
 
-### <a name="create_file_page"></a>Create File Page
+#### <a name="create_file_page"></a>Create File Page
 A file page (see Figure 3) contains information about the file assets such as file name, description, owner, last modified date, upload date, license, download link, file size.
 The filestore asset is used for storing and sharing tabular data. The data can be in Excel or CSV formats. Administration of metadata and sharing files with other users as public data is provided in the DataGraft GUI.
 
@@ -79,7 +79,7 @@ For creating a filepage, you can either upload a new file or choose an existing 
 ![Finish File Page](/static/images/documentation/1.7finished_file_store.png)
 <p align="center">Figure 6: File Page Completed</p>
 
-### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
+#### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
 A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9) displays information such as description, keywords, license, provision date and the size of the data.
 
 ![Create SPARQL endpoint: Upload or Select a file](/static/images/documentation/create_sparql_endpoint_file.png)
@@ -94,7 +94,7 @@ A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9)
 ![Query SPARQL Endpoint](/static/images/documentation/query_sparql_endpoint.png)
 <p align="center">Figure 10: Query SPARQL Endpoint</p>
 
-### <a name="add_sparql_query"></a>Add SPARQL Query
+#### <a name="add_sparql_query"></a>Add SPARQL Query
 A query page (see Figure 11) displays information about the query – query textual description, query text, and the SPARQL endpoints that are associated with this query. The user has the option to navigate to the endpoint page or select the endpoint and execute the query. Results are displayed in a results table.
 
 ![Finish SPARQL Endpoint](/static/images/documentation/sparql_query1.png)
@@ -105,6 +105,8 @@ A query page (see Figure 11) displays information about the query – query text
 
 ![Query SPARQL Endpoint](/static/images/documentation/sparql_query3.png)
 <p align="center">Figure 13: Publish</p>
+
+### end of part
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
