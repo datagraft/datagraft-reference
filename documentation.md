@@ -37,15 +37,6 @@ weight: 2
       * [Creating and Editing Prefixers](#prefixers)
    * [Building RDF mapping](#rdf)      
    * [Executing transformation](#apply)      
-8. [Data visualization portal](#visual)
-   * [Create visualization portal](#setup)
-   * [Configure widget](#configure)
-      * [Tabular view](#tabular)
-      * [Line chart](#linechart)
-      * [Bar chart](#barchart)
-      * [Pie chart](#piechart)
-      * [Scatter chart](#scatterchart)
-      * [Map](#map)
 
 ### <a name="datagraft_components"></a>Components in DataGraft
 DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). DataGraft provides a user interface that enables user data and account management, user assets cataloguing and dataset and database management.
