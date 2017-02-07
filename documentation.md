@@ -66,16 +66,16 @@ The filestore asset is used for storing and sharing tabular data. The data can b
 
 For creating a filepage, you can either upload a new file or choose an existing file. Below is the step-by-step guide for Creating Filepage on DataGraft.
 
-![Create File Page by Uploading New File](/static/images/documentation/1.5create_file_page_uploaded_file.png)
+![Create File Page by Uploading New File](/static/images/documentation/1.5create_file_page_uploaded_file0.png)
 <p align="center">Figure 3: Create Filepage by uploading a new file</p>
 
 ![Create File Page With Existing File](/static/images/documentation/1.4create_file_page_exist_file.png)
 <p align="center">Figure 4: Create Filepage by choosing an existing file</p>
 
-![Edit File Metadata](/static/images/documentation/1.6edit_metadata_file.png)
+![Edit File Metadata](/static/images/documentation/1.6edit_metadata_file0.png)
 <p align="center">Figure 5: Edit File Metadata</p>
 
-![Finish File Page](/static/images/documentation/1.7finished_file_store.png)
+![Finish File Page](/static/images/documentation/1.7finished_file_store0.png)
 <p align="center">Figure 6: File Page Completed</p>
 
 #### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
