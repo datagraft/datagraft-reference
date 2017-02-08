@@ -130,12 +130,12 @@ If you wish to share the transformation, it is possible to toggle it as public. 
 After describing metadata, you may save transformation by clicking “Save” button ![Save transformation](/static/images/documentation/save0.png) in the bottom right corner. The transformation will be saved for later.
 
 ###  <a name="transform_preview"></a>Transformation Preview
-Preview area is located in the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation.
+Preview area is located on the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation.
 
 ![Transformation metadata](/static/images/documentation/transformmetadata.png)
 <p align="center">Figure 14: Transformation Creation Window</p>
 
-After your transformation was saved, in the bottom right corner you will see the **Transform data** button: ![Transform data](/static/images/documentation/transformdata.png). By clicking on it you are presented with the following options below. ![Transform your data] (/static/images/documentation/executedownload.png)
+You can see the **Transform data** ![Transform data](/static/images/documentation/transformdata.png)button on the bottom right corner. By clicking on it you are presented with the following options below. ![Transform your data] (/static/images/documentation/executedownload.png)
 For "Execute and retrieve", you will get the new CSV with your transformation performed to it, while for "Download executable", you will get the JAR executable file with the transformation performed on it.
 
 
