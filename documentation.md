@@ -78,61 +78,6 @@ For creating a filepage, you can either upload a new file or choose an existing 
 ![Finish File Page](/static/images/documentation/1.7finished_file_store0.png)
 <p align="center">Figure 6: File Page Completed</p>
 
-##  <a name="transform"></a>Data cleaning and transformation
-This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
-
-At the basis of DataGraft data transformations there lies a [Grafter DSL](http://grafter.org/about/index.html) (Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
-
-There are several ways you can create a transformation on DataGraft. The first option is to go to the Transform tab and click the plus icon in the right bottom corner to create a new transformation. Please note, that in this case created transformation will not appear in a list of your transformations unless you press the save button explicitly. Another option is create a transformation as a copy of existing transformation from the list of your transformations or public transformations created by other users(fork transformation). Forking a transformation doesn't save a new transformation automatically as well. There is also a third option for creating a new transformation: after you have uploaded a tabular data you have an option of creating a datapage using  "Create using new transformation" button (more details can be found in [Publishing data](#publish) section). This action leads to creating and saving a new transformation automatically.
-
-###  <a name="transform_meta"></a>Transformation metadata
-The first tab seen in the transformation creation window is "Metadata". Here user defines transformation title and gives a short description of how this transformation processes targeted data. If you wish to share transformation, it is possible to expose it as public. In this case other platform users will be able to explore and use given transformation.
-
-
-After describing metadata, you may save transformation by clicking “Save” button ![Save transformation](/static/images/documentation/save0.png) in the top right corner. The transformation may be as well saved later at any moment.
-
-
-
-![Transformation metadata](/static/images/documentation/Transform2.png)
-
-###  <a name="transform_preview"></a>Transformation Preview
-
-After your transformation was saved, in the bottom right corner you may see this icon: ![Apply to dataset](/static/images/documentation/open0.png). By clicking on it you are presented with the following options below. ![Transform your data] (/static/images/documentation/executedownload.png)
-For "Execute and retrieve", you will get the new CSV file without the gender column, while for "Download executable", you will get the JAR executable file.
-
-Preview area is located in the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation. 
-
-![Transformation preview](/static/images/documentation/Transform4.png)
-
-###  <a name="transform_pipeline"></a>Constructing Transformation Pipeline
-
-Data cleaning and transformation in DataGraft platform is performed with help of a “pipeline” concept.  To begin with, each single transformation step is defined as a pipe – a function that performs simple data conversion on its input. The great fact about these functions is that they may be combined together in a such way, that the output of one pipe acts as an input for another. Obviously, the input/output data, that travels through this pipeline is dataset being transformed. This way of composing operations gives a great flexibility and allows to perform rather complex data conversions.
-
-The first implicit step of every transformation pipeline is getting the very first pipeline input. Therefore, each transformation starts from reading a dataset from an uploaded file. However, you do not need to include this step into your pipeline manually, since this action is performed automatically for each transformation.
-
-
-To add a first transformation step click the ![Add step](/static/images/documentation/add.png) button next to the pipeline
-
-![Pipeline view](/static/images/documentation/addpipefunction.png)
-
-
-Now you can see the list of functions you may use to modify uploaded dataset. Available functions are logically grouped according to the type of effect they have on the data. Consequently, OPERATIONS ON COLUMNS add, remove or modify dataset columns, while OPERATIONS ON ROWS extract certain rows from a dataset based on row numbers or some condition that user defines. Operations "Make dataset" and "Reshape dataset" affect the entire dataset.
-
-
-![Available function list](/static/images/documentation/functionlist.png)
-
- For each operation you can see a short documentation with simple illustrated example by clicking "show/hide documentation" button. For every pipeline function you create you may leave a short description note in the "Comment" field. This information helps you and other users of your transformation to understand operations that are performed here. If you ignore this field, the note will be created automatically based on function parameters you have specified.
- 
-![Common operations for all pipe functions](/static/images/documentation/Transform3.png)
-
-Once you have added a new function to the pipeline, it will instantly appear in the pipeline view. You are free to change function parameters any time you need it by simply clicking on the correspondent function icon. To get a short information about the actions performed by this function you may just hover mouse pointer over its name. In many cases function order significantly affects the transformation result. It is very simple to change this order by just dragging function icons along the pipeline. To remove a function click ![Remove function](/static/images/documentation/minus.png)  button next to the function you would like to remove.
- 
-In DataGraft you are able to see the partial preview of the transformation on each step. Last option makes it possible to see how the transformed data looks like for every stage of transformation.
-
-![Partial preview](/static/images/documentation/partial.png)
-
- The following sections provide you with detailed guidelines for each function usage.
-
 #### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
 A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9) displays information such as description, keywords, license, provision date and the size of the data.
 
@@ -161,6 +106,60 @@ A query page (see Figure 11) displays information about the query – query text
 <p align="center">Figure 13: Publish</p>
 
 ### end of part
+
+##  <a name="transform"></a>Data cleaning and transformation
+This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
+
+At the basis of DataGraft data transformations there lies a [Grafter DSL](http://grafter.org/about/index.html) (Domain Specific Language), which in its turn is implemented in Clojure. Therefore, to take maximum advantage of the service, one should be acquainted with mentioned languages. However number of transformations, depending on their complexity, can be done through intuitive and user-friendly GUI without any coding.
+
+There are several ways you can create a transformation on DataGraft. The first option is to go to the Transform tab and click the plus icon in the right bottom corner to create a new transformation. Please note, that in this case created transformation will not appear in a list of your transformations unless you press the save button explicitly. Another option is create a transformation as a copy of existing transformation from the list of your transformations or public transformations created by other users(fork transformation). Forking a transformation doesn't save a new transformation automatically as well. There is also a third option for creating a new transformation: after you have uploaded a tabular data you have an option of creating a datapage using  "Create using new transformation" button (more details can be found in [Publishing data](#publish) section). This action leads to creating and saving a new transformation automatically.
+
+###  <a name="transform_meta"></a>Transformation metadata
+The first tab seen in the transformation creation window is "Metadata". Here user defines transformation title and gives a short description of how this transformation processes targeted data. If you wish to share transformation, it is possible to expose it as public. In this case other platform users will be able to explore and use given transformation.
+
+
+After describing metadata, you may save transformation by clicking “Save” button ![Save transformation](/static/images/documentation/save0.png) in the top right corner. The transformation may be as well saved later at any moment.
+
+
+
+![Transformation metadata](/static/images/documentation/transformmetadata.png)
+
+###  <a name="transform_preview"></a>Transformation Preview
+
+After your transformation was saved, in the bottom right corner you may see this icon: ![Apply to dataset](/static/images/documentation/open0.png). By clicking on it you are presented with the following options below. ![Transform your data] (/static/images/documentation/executedownload.png)
+For "Execute and retrieve", you will get the new CSV file without the gender column, while for "Download executable", you will get the JAR executable file.
+
+Preview area is located in the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation. 
+
+![Transformation preview](/static/images/documentation/Transform4.png)
+
+###  <a name="transform_pipeline"></a>Constructing Transformation Pipeline
+
+Data cleaning and transformation in DataGraft platform is performed with help of a “pipeline” concept.  To begin with, each single transformation step is defined as a pipe – a function that performs simple data conversion on its input. The great fact about these functions is that they may be combined together in a such way, that the output of one pipe acts as an input for another. Obviously, the input/output data, that travels through this pipeline is dataset being transformed. This way of composing operations gives a great flexibility and allows to perform rather complex data conversions.
+
+The first implicit step of every transformation pipeline is getting the very first pipeline input. Therefore, each transformation starts from reading a dataset from an uploaded file. However, you do not need to include this step into your pipeline manually, since this action is performed automatically for each transformation.
+
+
+To add a first transformation step click the ![Add step](/static/images/documentation/add.png) button next to the pipeline
+
+![Pipeline view](/static/images/documentation/addpipefunction.png)
+
+
+Now you can see the list of functions you may use to modify uploaded dataset. Available functions are logically grouped according to the type of effect they have on the data. Consequently, OPERATIONS ON COLUMNS add, remove or modify dataset columns, while OPERATIONS ON ROWS extract certain rows from a dataset based on row numbers or some condition that user defines. Operations "Make dataset" and "Reshape dataset" affect the entire dataset.
+
+![Available function list](/static/images/documentation/functionlist.png)
+
+ For each operation you can see a short documentation with simple illustrated example by clicking "show/hide documentation" button. For every pipeline function you create you may leave a short description note in the "Comment" field. This information helps you and other users of your transformation to understand operations that are performed here. If you ignore this field, the note will be created automatically based on function parameters you have specified.
+ 
+![Common operations for all pipe functions](/static/images/documentation/Transform3.png)
+
+Once you have added a new function to the pipeline, it will instantly appear in the pipeline view. You are free to change function parameters any time you need it by simply clicking on the correspondent function icon. To get a short information about the actions performed by this function you may just hover mouse pointer over its name. In many cases function order significantly affects the transformation result. It is very simple to change this order by just dragging function icons along the pipeline. To remove a function click ![Remove function](/static/images/documentation/minus.png)  button next to the function you would like to remove.
+ 
+In DataGraft you are able to see the partial preview of the transformation on each step. Last option makes it possible to see how the transformed data looks like for every stage of transformation.
+
+![Partial preview](/static/images/documentation/partial.png)
+
+ The following sections provide you with detailed guidelines for each function usage.
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
