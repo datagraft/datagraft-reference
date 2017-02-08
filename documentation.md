@@ -114,10 +114,12 @@ At the basis of DataGraft data transformations there lies a [Grafter DSL](http:/
 
 There are several ways you can create a transformation on DataGraft. The first option is to go to the Transform tab and click the plus icon in the right bottom corner to create a new transformation. Please note, that in this case created transformation will not appear in a list of your transformations unless you press the save button explicitly. Another option is create a transformation as a copy of existing transformation from the list of your transformations or public transformations created by other users(fork transformation). Forking a transformation doesn't save a new transformation automatically as well. There is also a third option for creating a new transformation: after you have uploaded a tabular data you have an option of creating a datapage using  "Create using new transformation" button (more details can be found in [Publishing data](#publish) section). This action leads to creating and saving a new transformation automatically.
 
-###  <a name="transform_meta"></a>Transformation metadata
+###  <a name="launching_grafterizer"></a>Launching Grafterizer
 After you upload your CSV file, you can transform the file with Grafterizer by clicking the **Launch** button.
 ![Launch Grafterizer](/static/images/documentation/launchgrafterizer.png)
+<p align="center">Figure 13: Launch Grafterizer</p>
 
+###  <a name="transform_meta"></a>Transformation metadata
 Once you are in Grafterizer, the first tab seen in the transformation creation window is **Metadata**. You are required to fill in the following on the left pane of the transformation creation window: 
 * Title (Name of transformation)
 * Description (Short description of transformation)
@@ -127,13 +129,16 @@ If you wish to share the transformation, it is possible to toggle it as public. 
 
 After describing metadata, you may save transformation by clicking “Save” button ![Save transformation](/static/images/documentation/save0.png) in the bottom right corner. The transformation will be saved for later.
 
-![Transformation metadata](/static/images/documentation/transformmetadata.png)
-
 ###  <a name="transform_preview"></a>Transformation Preview
+Preview area is located in the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation.
+
+![Transformation metadata](/static/images/documentation/transformmetadata.png)
+<p align="center">Figure 14: Transformation Creation Window</p>
+
 After your transformation was saved, in the bottom right corner you will see the **Transform data** button: ![Transform data](/static/images/documentation/transformdata.png). By clicking on it you are presented with the following options below. ![Transform your data] (/static/images/documentation/executedownload.png)
 For "Execute and retrieve", you will get the new CSV with your transformation performed to it, while for "Download executable", you will get the JAR executable file with the transformation performed on it.
 
-Preview area is located in the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation. 
+
 
 ![Transformation preview](/static/images/documentation/Transform4.png)
 
