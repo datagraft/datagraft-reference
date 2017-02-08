@@ -150,15 +150,16 @@ The first implicit step of every transformation pipeline is getting the very fir
 To add a first transformation step click the ![Add step](/static/images/documentation/add.png) button next to the pipeline
 
 ![Pipeline view](/static/images/documentation/addpipefunction.png)
-
+<p align="center">Figure 17: Add pipe function</p>
 
 Now you can see the list of functions you may use to modify uploaded dataset. Available functions are logically grouped according to the type of effect they have on the data. Consequently, OPERATIONS ON COLUMNS add, remove or modify dataset columns, while OPERATIONS ON ROWS extract certain rows from a dataset based on row numbers or some condition that user defines. Operations "Make dataset" and "Reshape dataset" affect the entire dataset.
 
 ![Available function list](/static/images/documentation/functionlist.png)
+<p align="center">Figure 18: List of available functions</p>
 
  For each operation you can see a short documentation with simple illustrated example by clicking "show/hide documentation" button. For every pipeline function you create you may leave a short description note in the "Comment" field. This information helps you and other users of your transformation to understand operations that are performed here. If you ignore this field, the note will be created automatically based on function parameters you have specified.
  
-![Common operations for all pipe functions](/static/images/documentation/Transform3.png)
+![Common operations for all pipe functions](/static/images/documentation/pipefunccommon1.png)
 
 Once you have added a new function to the pipeline, it will instantly appear in the pipeline view. You are free to change function parameters any time you need it by simply clicking on the correspondent function icon. To get a short information about the actions performed by this function you may just hover mouse pointer over its name. In many cases function order significantly affects the transformation result. It is very simple to change this order by just dragging function icons along the pipeline. To remove a function click ![Remove function](/static/images/documentation/minus.png)  button next to the function you would like to remove.
  
