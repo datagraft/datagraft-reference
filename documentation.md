@@ -115,12 +115,17 @@ At the basis of DataGraft data transformations there lies a [Grafter DSL](http:/
 There are several ways you can create a transformation on DataGraft. The first option is to go to the Transform tab and click the plus icon in the right bottom corner to create a new transformation. Please note, that in this case created transformation will not appear in a list of your transformations unless you press the save button explicitly. Another option is create a transformation as a copy of existing transformation from the list of your transformations or public transformations created by other users(fork transformation). Forking a transformation doesn't save a new transformation automatically as well. There is also a third option for creating a new transformation: after you have uploaded a tabular data you have an option of creating a datapage using  "Create using new transformation" button (more details can be found in [Publishing data](#publish) section). This action leads to creating and saving a new transformation automatically.
 
 ###  <a name="transform_meta"></a>Transformation metadata
-The first tab seen in the transformation creation window is "Metadata". Here user defines transformation title and gives a short description of how this transformation processes targeted data. If you wish to share transformation, it is possible to expose it as public. In this case other platform users will be able to explore and use given transformation.
+After you upload your CSV file, you can transform the file with Grafterizer by clicking the **Launch** button.
+![Launch Grafterizer](/static/images/documentation/launchgrafterizer.png)
 
+Once you are in Grafterizer, the first tab seen in the transformation creation window is **Metadata**. You are required to fill in the following on the left pane of the transformation creation window: 
+* Title (Name of transformation)
+* Description (Short description of transformation)
+* Add a keyword (Keywords of transformation)
+
+If you wish to share the transformation, it is possible to toggle it as public. If the transformation is public, other users will be able to explore and use that transformation.
 
 After describing metadata, you may save transformation by clicking “Save” button ![Save transformation](/static/images/documentation/save0.png) in the top right corner. The transformation may be as well saved later at any moment.
-
-
 
 ![Transformation metadata](/static/images/documentation/transformmetadata.png)
 
