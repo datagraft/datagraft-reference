@@ -160,106 +160,18 @@ Now you can see the list of functions you may use to modify uploaded dataset. Av
  For each operation you can see a short documentation with simple illustrated example by clicking "show/hide documentation" button. For every pipeline function you create you may leave a short description note in the "Comment" field. This information helps you and other users of your transformation to understand operations that are performed here. If you ignore this field, the note will be created automatically based on function parameters you have specified.
  
 ![Common operations for all pipe functions](/static/images/documentation/pipefunccommon1.png)
+<p align="center">Figure 19: Common operations for all pipe functions</p>
 
 Once you have added a new function to the pipeline, it will instantly appear in the pipeline view. You are free to change function parameters any time you need it by simply clicking on the correspondent function icon. To get a short information about the actions performed by this function you may just hover mouse pointer over its name. In many cases function order significantly affects the transformation result. It is very simple to change this order by just dragging function icons along the pipeline. To remove a function click ![Remove function](/static/images/documentation/minus.png)  button next to the function you would like to remove.
  
 In DataGraft you are able to see the partial preview of the transformation on each step. Last option makes it possible to see how the transformed data looks like for every stage of transformation.
 
 ![Partial preview](/static/images/documentation/partial.png)
+<p align="center">Figure 20: Live preview of every stage of transformation</p>
 
  The following sections provide you with detailed guidelines for each function usage.
-
-### <a name="data_transformations"></a>Data transformations
- Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
-
-![Transformations in DataGraft](/static/images/documentation/transf.jpg)
-
-
-Transformations have some properties including transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section) and stored as transformation metadata.
-
-You can see the transformation metadata and get transformation details including pipeline overview, rdf mapping and clojure code if  you click on a transformation name in the list of [public](#explore) or [your](#dashboard) transformations. This may help you to get an understanding of what input data does this transformation require and the way this data is cleaned and transformed.
-
-![Read-only preview of transformation](/static/images/documentation/readonly.png)
-
-Transformations in this view are shown in read-only mode. If you wish to make changes to transformation please click <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit"</span> button for transformations that you own or <span style="color:blue; font-family:Georgia; font-size:18pt;">"Fork"</span> button to copy and edit a public transformation.
-
-For further information on how transformations can be created and used on your data please refer to the  [Data cleaning and transformation](#transform) section.
-
-### <a name="data_pages"></a>Data pages
-Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
-
-<a name="datapagemeta"></a>![Data page properties](/static/images/documentation/datapagemeta.png)
-
-Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Export row data"</span> button; or as RDF by pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Export RDF data"</span>. The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
-
-Data pages containing RDF also allow you to perform [SPARQL](http://www.w3.org/TR/sparql11-query/) querying on data they contain.  The example of such query and selection results are shown below.
-
-![Export RDF data](/static/images/documentation/sparql.png)
-
-In addition, data pages may be provided with data visualizations. To see the details on data visualizations refer to[Data visualizations](#visual) section.
-
-### <a name="explore"></a>Exploring public transformations
-
-To explore data pages and data transformations created by other users switch to the  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Explore"</span> tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". In this way you create a new datapage, but the transformation itself is not added to the list of your assets. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use <span style="color:blue; font-family:Georgia; font-size:18pt;">"Fork transformation"</span> button. The transformation thus will be copied to the list of your transformations.  
-
-
-![Explore transformation](/static/images/documentation/exploretransformation1.png)
-
-
-
-### <a name="user_registration"></a>User Registration
-In order to use public data pages and transformations or create your assets through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing <span style="color:blue; font-family:Georgia; font-size:18pt;">"My account"</span> menu item.
-
-###	 <a name="dashboard"></a>Dashboard
-User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
-
-![Catalogue of your data pages and data transformations](/static/images/documentation/dashboardcatalog.png)
-
-##  <a name="workflow"></a>The workflow overview
-
-There are a lot of things that can be done with help of DataGraft portal. To give you a general overview of DataGraft functionality here is a summary of possible scenarios 
-
-
-![Workflows](/static/images/documentation/workflows.jpg)
-
-First, if you are interested in publishing your data in form of Linked Data and already have its RDF representation, you can simply upload it to the platform and create a data page.
-
-If data you are working with is in tabular format, there are more alternatives. First one is creating data page from raw tabular data. It is as simple process as creating data page from RDF data and can be done just in few clicks (see [Publish data](#publish) for details). 
-In case when your tabular data needs to go through some transformations, you can create data transformation and apply it to data. This may include dataset modification, data conversion from tabular to RDF form or both these procedures in one transformation. If all that you want is to transform data, on this stage you can download processed data to your computer, either in tabular or in linked data form. Alternatively you may go further and publish transformed data as a data page.
-
-## <a name="video"></a>Grafterizer workflow demonstration
-
-The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
-
-<iframe width="680" height="382" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
-
-##  <a name="publish"></a>Publishing data
-
-
-
  
-Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span> tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
-![Upload data](/static/images/documentation/upload.png)
-
-After data is succesfully uploaded (this is indicated by a green mark in the top right corner of a file icon) you have several options:
-
-1. Create data page from a raw data without applying any transformation on it.
-2. Transform your data before creating a data page. This in turn can be done in two ways	
-   1. By creating a new transformation to use on your data
-   2. By applying an existing transformation to your data
-
-	
-	
-Let's go through the most simple scenario by choosing the first alternative. To do this you just click <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span> button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span>. And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
-
-
-However, in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Create using new transformation"</span> button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
-
-
-
-
-  
-####  <a name="make_dataset"></a>Make Dataset 
+ ####  <a name="make_dataset"></a>Make Dataset 
 
 As its name suggests "Make dataset" operation creates new dataset from its input. If you leave all parameter fields blank new dataset will be created from all the input columns with column names given as a simple alphabetic sequence. By checking "move first row to header" option you get all the column names from the first row. The first row will be removed from your dataset.  You may as well specify column names you wish to see in a new dataset or fetch first n columns.
 
@@ -372,6 +284,80 @@ Finally, you may filter dataset by applying standard predicate or user-defined u
 
 The priority of listed option is defined as they appear - from top to down: if "Text to match" field is specified, other fields are ignored, if "Text to match" is ignored, but "Regular expression" is defined -- this one will be used to filter your dataset ignoring functions below (if specified any).
 
+### <a name="data_transformations"></a>Data transformations
+ Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
+
+![Transformations in DataGraft](/static/images/documentation/transf.jpg)
+
+
+Transformations have some properties including transformation name, description, owner and public/private property. They are defined on a data transformation creation stage (see [Data cleaning and transformation](#transform) section) and stored as transformation metadata.
+
+You can see the transformation metadata and get transformation details including pipeline overview, rdf mapping and clojure code if  you click on a transformation name in the list of [public](#explore) or [your](#dashboard) transformations. This may help you to get an understanding of what input data does this transformation require and the way this data is cleaned and transformed.
+
+![Read-only preview of transformation](/static/images/documentation/readonly.png)
+
+Transformations in this view are shown in read-only mode. If you wish to make changes to transformation please click <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit"</span> button for transformations that you own or <span style="color:blue; font-family:Georgia; font-size:18pt;">"Fork"</span> button to copy and edit a public transformation.
+
+For further information on how transformations can be created and used on your data please refer to the  [Data cleaning and transformation](#transform) section.
+
+### <a name="data_pages"></a>Data pages
+Another type of asset that users may create and share in DataGraft is **data page**. Data pages contain cleaned and transformed data you want to publish. As well as data transformations, data pages are stored with some metadata, including data page name; short description; keywords, describing a data page; owner; creation date and public/private property (see [Publishing data](#publish) section). The latter is defined by data page owner and specifies whether this data page can be explored by other users of a platform or not. 
+
+<a name="datapagemeta"></a>![Data page properties](/static/images/documentation/datapagemeta.png)
+
+Users that have access to the data page (i.e. just owners in case of private pages and everyone else for public pages) can locally download information associated with a data page in a raw tabular format by pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Export row data"</span> button; or as RDF by pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Export RDF data"</span>. The list of supported RDF formats includes RDF/XML(.rdf), n-triple(.nt), turtle(.ttl), n3(.n3), nquads(.nq), RDF/JSON(.rj).
+
+Data pages containing RDF also allow you to perform [SPARQL](http://www.w3.org/TR/sparql11-query/) querying on data they contain.  The example of such query and selection results are shown below.
+
+![Export RDF data](/static/images/documentation/sparql.png)
+
+In addition, data pages may be provided with data visualizations. To see the details on data visualizations refer to[Data visualizations](#visual) section.
+
+### <a name="explore"></a>Exploring public transformations
+
+To explore data pages and data transformations created by other users switch to the  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Explore"</span> tab. Here you can see a list of public assets. You may receive basic information about any public data page or data transformation by clicking its name. If in a process of exploring data transformation you find it to be suitable for your needs, you can apply it to your data directly from the explore view. To do so, you just drag and drop your datafile in the white frame labeled "Create data page". In this way you create a new datapage, but the transformation itself is not added to the list of your assets. If you want to make some changes to the transformation before you use it or just find it interesting and want to explore it in detail, use <span style="color:blue; font-family:Georgia; font-size:18pt;">"Fork transformation"</span> button. The transformation thus will be copied to the list of your transformations.  
+
+![Explore transformation](/static/images/documentation/exploretransformation1.png)
+
+### <a name="user_registration"></a>User Registration
+In order to use public data pages and transformations or create your assets through a platform, you should first sign up for DataGraft account. After registration you are automatically redirected to the data page creation service, from where you may start a process of creating your first data page. This process is described in detail in section [Publishing data](#publish) . After you have registered you can change your profile settings by clicking on the user name in top right corner of the website and choosing <span style="color:blue; font-family:Georgia; font-size:18pt;">"My account"</span> menu item.
+
+###	 <a name="dashboard"></a>Dashboard
+User dashboard helps to manage data pages and data transformations created by user.  The dashboard view gives you an overview of data pages and transformations you have created. From here you can search through your assets, delete them, edit their properties; fork and execute transformations and download data associated with data pages.
+
+![Catalogue of your data pages and data transformations](/static/images/documentation/dashboardcatalog.png)
+
+##  <a name="workflow"></a>The workflow overview
+
+There are a lot of things that can be done with help of DataGraft portal. To give you a general overview of DataGraft functionality here is a summary of possible scenarios 
+
+![Workflows](/static/images/documentation/workflows.jpg)
+
+First, if you are interested in publishing your data in form of Linked Data and already have its RDF representation, you can simply upload it to the platform and create a data page.
+
+If data you are working with is in tabular format, there are more alternatives. First one is creating data page from raw tabular data. It is as simple process as creating data page from RDF data and can be done just in few clicks (see [Publish data](#publish) for details). 
+In case when your tabular data needs to go through some transformations, you can create data transformation and apply it to data. This may include dataset modification, data conversion from tabular to RDF form or both these procedures in one transformation. If all that you want is to transform data, on this stage you can download processed data to your computer, either in tabular or in linked data form. Alternatively you may go further and publish transformed data as a data page.
+
+## <a name="video"></a>Grafterizer workflow demonstration
+
+The following video demonstrates how Grafterizer can be used to clean and transform tabular data.
+
+<iframe width="680" height="382" src="https://www.youtube.com/embed/PMim5BNqUag" frameborder="0" allowfullscreen></iframe>
+
+##  <a name="publish"></a>Publishing data
+Publishing data with help of DataGraft platform is a rather simple process. You can create a data page from several different points. You may start by switching to a <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span> tab in a main menu. The first thing you do when creating a data page this way is uploading data. To do so, you just drop your dataset file in a raw CSV or RDF format in a white frame under "Upload your data" label. 
+![Upload data](/static/images/documentation/upload.png)
+
+After data is succesfully uploaded (this is indicated by a green mark in the top right corner of a file icon) you have several options:
+
+1. Create data page from a raw data without applying any transformation on it.
+2. Transform your data before creating a data page. This in turn can be done in two ways	
+   1. By creating a new transformation to use on your data
+   2. By applying an existing transformation to your data
+	
+Let's go through the most simple scenario by choosing the first alternative. To do this you just click <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span> button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span>. And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
+
+However, in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Create using new transformation"</span> button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
 
 ###  <a name="customfuns"></a>Defining Auxiliary Functions 
 
