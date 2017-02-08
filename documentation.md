@@ -146,7 +146,6 @@ Data cleaning and transformation in DataGraft platform is performed with help of
 
 The first implicit step of every transformation pipeline is getting the very first pipeline input. Therefore, each transformation starts from reading a dataset from an uploaded file. However, you do not need to include this step into your pipeline manually, since this action is performed automatically for each transformation.
 
-
 To add a first transformation step click the ![Add step](/static/images/documentation/add.png) button next to the pipeline
 
 ![Pipeline view](/static/images/documentation/addpipefunction.png)
@@ -166,7 +165,7 @@ Once you have added a new function to the pipeline, it will instantly appear in 
  
 In DataGraft you are able to see the partial preview of the transformation on each step. Last option makes it possible to see how the transformed data looks like for every stage of transformation.
 
-![Partial preview](/static/images/documentation/partial.png)
+![Partial preview](/static/images/documentation/steppreview.png)
 <p align="center">Figure 20: Live preview of every stage of transformation</p>
 
 The following sections provide you with detailed guidelines for each function usage.
