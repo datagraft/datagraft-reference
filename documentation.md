@@ -169,12 +169,11 @@ In DataGraft you are able to see the partial preview of the transformation on ea
 ![Partial preview](/static/images/documentation/partial.png)
 <p align="center">Figure 20: Live preview of every stage of transformation</p>
 
- The following sections provide you with detailed guidelines for each function usage.
+The following sections provide you with detailed guidelines for each function usage.
  
- ####  <a name="make_dataset"></a>Make Dataset 
+####  <a name="make_dataset"></a>Make Dataset 
 
 As its name suggests "Make dataset" operation creates new dataset from its input. If you leave all parameter fields blank new dataset will be created from all the input columns with column names given as a simple alphabetic sequence. By checking "move first row to header" option you get all the column names from the first row. The first row will be removed from your dataset.  You may as well specify column names you wish to see in a new dataset or fetch first n columns.
-
 
 ####  <a name="melt"></a>Reshape Dataset
 Reshape dataset "melts" given dataset in a such way, that each row of the new dataset represents a unique combination of variables and values for the given column array. The best way to explain this function is through an example. 
