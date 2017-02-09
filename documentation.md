@@ -95,17 +95,14 @@ The "Querying" tab (see Figure 10) provides a searchable list of queries (includ
 ![Query SPARQL Endpoint](/static/images/documentation/query_sparql_endpoint_label.png)
 <p align="center">Figure 10: SPARQL Endpoint Page - Querying</p>
 
-#### <a name="add_sparql_query"></a>Add SPARQL Query
+#### <a name="add_sparql_query"></a>SPARQL Query
 A query page (see Figure 11) displays information about the query – query textual description, query text, and the SPARQL endpoints that are associated with this query. The user has the option to navigate to the endpoint page or select the endpoint and execute the query. Results are displayed in a results table.
 
-![Finish SPARQL Endpoint](/static/images/documentation/sparql_query1.png)
-<p align="center">Figure 11: Add SPARQL Query Details</p>
-
 ![Query SPARQL Endpoint](/static/images/documentation/sparql_query2.png)
-<p align="center">Figure 12: Query SPARQL Endpoint</p>
+<p align="center">Figure 11: Query Page</p>
 
-![Query SPARQL Endpoint](/static/images/documentation/sparql_query3.png)
-<p align="center">Figure 13: Publish</p>
+![Query SPARQL Endpoint](/static/images/documentation/add_sparql_query_details_label.png)
+<p align="center">Figure 12: Add SPARQL Query Details</p>
 
 ##  <a name="transform"></a>Data cleaning and transformation
 This section explains how tabular data is transformed in DataGraft platform and gives you the best strategies for data transformation.
