@@ -337,7 +337,7 @@ After you've completed creating transformation either with or without RDF mappin
  
 Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
 
-
+### end of part
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
