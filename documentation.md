@@ -129,7 +129,7 @@ After describing metadata, you may save transformation by clicking “Save” bu
 ###  <a name="transform_preview"></a>Transformation Preview
 Preview area is located on the right part of transformation window. You can see two tabs there -- one with the original data and another with changes made through transformation pipeline. Each time you modify a pipeline, the transformation is  applied to the previewed dataset immediately, so you can see the effect of each performed step. You may adjust preview settings to check and evaluate transformation steps you are creating. Thus, it is possible to hide columns and to sort visible data. The changes made through these settings are not part of the data transformation and affect just previewed data. However, at any time you may export tabular data either as it looks in the preview or in a format it has at the current stage of your transformation.
 
-![Transformation metadata](/static/images/documentation/transformmetadata.png)
+![Transformation metadata](/static/images/documentation/metadatatransform.png)
 <p align="center">Figure 15: Transformation Creation Window</p>
 
 ###  <a name="transform_pipeline"></a>Constructing Transformation Pipeline
