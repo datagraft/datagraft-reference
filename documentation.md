@@ -282,6 +282,71 @@ Finally, you may filter dataset by applying standard predicate or user-defined u
 
 The priority of listed option is defined as they appear - from top to down: if "Text to match" field is specified, other fields are ignored, if "Text to match" is ignored, but "Regular expression" is defined -- this one will be used to filter your dataset ignoring functions below (if specified any).
 
+###  <a name="customfuns"></a>Defining Auxiliary Functions 
+
+Some complex transformations cannot be done with help of operations described above. In this case you may need to define your own pipeline functions. This can be done with the help of "Custom code" option using Clojure language
+
+####  <a name="utility"></a>Creating and Editing Custom Utility Functions
+
+Creating utility functions for transformations is a great way to encapsulate the logic of data modifications, thus making them independent of data they are applied to. For instance, if to convert data in several dataset columns you use the same formula, you can define a function, that performs all the necessary calculations based on its input parameters and call it any time and on any data you need. 
+
+To create your custom function use <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit utility functions"</span> button. In the window that opens you can see the list of available functions at the left side and code editor at the right side.
+
+![Create custom utility function](/static/images/documentation/createcustom.png)
+
+
+Each function can be removed by pressing ![Remove custom utility function](/static/images/documentation/minus.png) icon next to the function name. New functions are added by a plus icon in the toolbox below function list.
+
+Immediately after you have created a utility function you may start using it as a parameter in pipeline functions.
+
+
+![Tip](/static/images/documentation/magic.png)**_Tips and tricks:_**
+
+*If you create a function having a dataset as an input parameter, it is possible to make it a part of the transformation pipeline directly. You may add this function to a pipeline by choosing "Custom function" option from a pipeline function list.*
+
+
+####  <a name="utility_string"></a>Creating String Transformation Functions through Graphical Interface
+
+However to specify text transformations you may need to perform on your data, you cans define a new function in a more user-friendly way. To do so press ![Create text transformation function](/static/images/documentation/createstring.png)  button in the same window, that is used for creating custom utility functions. Now you can see the dialog, where  you specify transformations you want to perform on text values. All modifications you define are instantly  demonstrated with help of sample text in the right bottom corner.
+
+![Create text transformation function](/static/images/documentation/createstringwin.png)
+
+
+####  <a name="prefixers"></a>Creating and Editing Prefixers
+One special type of utility functions you may define is **prefixer** -- function that expects one argument and adds some prefix to this argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
+You may create and edit prefixers in the "Edit prefixers" window. To see this window  press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit prefixers"</span> button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Add prefixer"</span>  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Add prefixer from selected"</span>. Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Remove prefixer"</span>.
+
+###  <a name="rdf"></a>Building RDF Mapping 
+
+One great method to publish your data on the Web is to use Linked Data for it. You can read about all the opportunities you get with linked data here: [http://www.w3.org/standards/semanticweb/data](http://www.w3.org/standards/semanticweb/data). If you've chosen to convert your data in a format of linked data, the first thing you need to do is to build an RDF map, that will determine way of getting linked data nodes from tabular data.
+
+When tabular data is converted to a desirable format, you can start creating RDF mappings. In the process of creating RDF skeleton you can immediately see a clear visualization of nodes and corresponding relations.
+
+To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". 
+The first step here  would be to specify the base graph URI. To create and edit prefixes you are going to need for the RDF generation use "Edit RDF prefixes button". By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
+
+Now you can start to create, edit and remove RDF nodes and their properties. The three groups of nodes that can be created here are URI nodes, literal nodes and blank nodes. To construct a URI node both as one obtained from dataset column and as some constant URI, you need to define some prefix. Prefixes are separated from values they complement with semicolon. Note, that dataset columns may be converted to the URI form during the tabular transformation step. In this case you don't have to specify prefixers to make them URI nodes in RDF schema. If you, however try to create a URI node from data column that is not recognized as a valid URI, and do not assign any prefix value to  this column, it would be automatically converted to column literal node. Literal nodes are represented just by their value in the resulted RDF file. An example  of RDF mapping skeleton is shown below.
+
+![RDF mapping skeleton](/static/images/documentation/rdfexample.png)
+
+###  <a name="rdf"></a>Executing transformation 
+
+
+
+After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
+
+ 
+![Apply transformation](/static/images/documentation/transform.png)
+
+1. Execute and save. By pressing this button you can publish transformed data as a data page 
+2. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
+3. Download executable. By pressing this button you can  download the executable jar file on your computer. This file can then be used to transform datasets locally instead of in the cloud. The JAR file can be ran by using the command line interface from the location where the file is located as follows:
+
+![jar](/static/images/documentation/jar.png)
+ 
+
+Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
+
 ### end of part
 
 ### <a name="data_transformations"></a>Data transformations
@@ -358,69 +423,4 @@ After data is succesfully uploaded (this is indicated by a green mark in the top
 Let's go through the most simple scenario by choosing the first alternative. To do this you just click <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span> button. This automatically takes you to the next page where you specify data page properties(see [Data page properties](#datapagemeta)). After everything is in order, you simply click  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Publish"</span>. And that's it, you have just created your very first data page. Now you (and other users in case if you defined this data page as public) have access to the data page, are able to download associated data, add more information and features to the created asset.
 
 However, in most cases you still need to process your data before publishing it. In this case you should use the transformation service. By clicking  <span style="color:blue; font-family:Georgia; font-size:18pt;">"Create using new transformation"</span> button you may start transforming your data. Details on how data transformations are created are given in Section [Data cleaning and transformation](#transform).
-
-###  <a name="customfuns"></a>Defining Auxiliary Functions 
-
-Some complex transformations cannot be done with help of operations described above. In this case you may need to define your own pipeline functions. This can be done with the help of "Custom code" option using Clojure language
-
-####  <a name="utility"></a>Creating and Editing Custom Utility Functions
-
-Creating utility functions for transformations is a great way to encapsulate the logic of data modifications, thus making them independent of data they are applied to. For instance, if to convert data in several dataset columns you use the same formula, you can define a function, that performs all the necessary calculations based on its input parameters and call it any time and on any data you need. 
-
-To create your custom function use <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit utility functions"</span> button. In the window that opens you can see the list of available functions at the left side and code editor at the right side.
-
-![Create custom utility function](/static/images/documentation/createcustom.png)
-
-
-Each function can be removed by pressing ![Remove custom utility function](/static/images/documentation/minus.png) icon next to the function name. New functions are added by a plus icon in the toolbox below function list.
-
-Immediately after you have created a utility function you may start using it as a parameter in pipeline functions.
-
-
-![Tip](/static/images/documentation/magic.png)**_Tips and tricks:_**
-
-*If you create a function having a dataset as an input parameter, it is possible to make it a part of the transformation pipeline directly. You may add this function to a pipeline by choosing "Custom function" option from a pipeline function list.*
-
-
-####  <a name="utility_string"></a>Creating String Transformation Functions through Graphical Interface
-
-However to specify text transformations you may need to perform on your data, you cans define a new function in a more user-friendly way. To do so press ![Create text transformation function](/static/images/documentation/createstring.png)  button in the same window, that is used for creating custom utility functions. Now you can see the dialog, where  you specify transformations you want to perform on text values. All modifications you define are instantly  demonstrated with help of sample text in the right bottom corner.
-
-![Create text transformation function](/static/images/documentation/createstringwin.png)
-
-
-####  <a name="prefixers"></a>Creating and Editing Prefixers
-One special type of utility functions you may define is **prefixer** -- function that expects one argument and adds some prefix to this argument in a such way, that the result represents an URI. This is something you may need in constructing RDF mapping part. If all you need is just constructing URI nodes by adding the same type of prefix to all values in a column, you should define prefixers in "Edit RDF mapping prefixes" dialog (see [Building RDF Mapping](#rdf) section). However, if you need to add some logic in assigning prefixes depending on column values, you should define prefixer functions here in pipeline view. 
-You may create and edit prefixers in the "Edit prefixers" window. To see this window  press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Edit prefixers"</span> button in the pipeline view. Here you can see the list of all prefixers you created for current transformation. You may add a new prefixer by specifying its name and URI and pressing <span style="color:blue; font-family:Georgia; font-size:18pt;">"Add prefixer"</span>  button. Created prefixer will instantly appear in the list of prefixers above. It is possible as well to create prefixer by adding some string to the existing one. In this case select a prefixer you wish to use as a base one, enter new prefixer name and string value and press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Add prefixer from selected"</span>. Now, if the base prefixer is changed, changes will be as well applied to the child prefixers. To remove prefixers select all prefixers you wish to remove and press <span style="color:blue; font-family:Georgia; font-size:18pt;">"Remove prefixer"</span>.
-
-###  <a name="rdf"></a>Building RDF Mapping 
-
-One great method to publish your data on the Web is to use Linked Data for it. You can read about all the opportunities you get with linked data here: [http://www.w3.org/standards/semanticweb/data](http://www.w3.org/standards/semanticweb/data). If you've chosen to convert your data in a format of linked data, the first thing you need to do is to build an RDF map, that will determine way of getting linked data nodes from tabular data.
-
-When tabular data is converted to a desirable format, you can start creating RDF mappings. In the process of creating RDF skeleton you can immediately see a clear visualization of nodes and corresponding relations.
-
-To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". 
-The first step here  would be to specify the base graph URI. To create and edit prefixes you are going to need for the RDF generation use "Edit RDF prefixes button". By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
-
-Now you can start to create, edit and remove RDF nodes and their properties. The three groups of nodes that can be created here are URI nodes, literal nodes and blank nodes. To construct a URI node both as one obtained from dataset column and as some constant URI, you need to define some prefix. Prefixes are separated from values they complement with semicolon. Note, that dataset columns may be converted to the URI form during the tabular transformation step. In this case you don't have to specify prefixers to make them URI nodes in RDF schema. If you, however try to create a URI node from data column that is not recognized as a valid URI, and do not assign any prefix value to  this column, it would be automatically converted to column literal node. Literal nodes are represented just by their value in the resulted RDF file. An example  of RDF mapping skeleton is shown below.
-
-![RDF mapping skeleton](/static/images/documentation/rdfexample.png)
-
-###  <a name="rdf"></a>Executing transformation 
-
-
-
-After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
-
- 
-![Apply transformation](/static/images/documentation/transform.png)
-
-1. Execute and save. By pressing this button you can publish transformed data as a data page 
-2. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
-3. Download executable. By pressing this button you can  download the executable jar file on your computer. This file can then be used to transform datasets locally instead of in the cloud. The JAR file can be ran by using the command line interface from the location where the file is located as follows:
-
-![jar](/static/images/documentation/jar.png)
- 
-
-Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
 
