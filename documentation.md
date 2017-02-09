@@ -314,8 +314,10 @@ One great method to publish your data on the Web is to use Linked Data for it. Y
 
 When tabular data is converted to a desirable format, you can start creating RDF mappings. In the process of creating RDF skeleton you can immediately see a clear visualization of nodes and corresponding relations.
 
-To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". 
+To start creating RDF mapping of your dataset use switch "Map tabular data to RDF". (See Figure 20)
 The first step here  would be to specify the base graph URI. To create and edit prefixes you are going to need for the RDF generation use "Edit RDF prefixes button". By pressing it you open a dialog, where you can as well see RDF vocabularies available by default.
+
+![Map Tabular Data to RDF](/static/images/documentation/map_tabular_rdf.png)
 
 Now you can start to create, edit and remove RDF nodes and their properties. The three groups of nodes that can be created here are URI nodes, literal nodes and blank nodes. To construct a URI node both as one obtained from dataset column and as some constant URI, you need to define some prefix. Prefixes are separated from values they complement with semicolon. Note, that dataset columns may be converted to the URI form during the tabular transformation step. In this case you don't have to specify prefixers to make them URI nodes in RDF schema. If you, however try to create a URI node from data column that is not recognized as a valid URI, and do not assign any prefix value to  this column, it would be automatically converted to column literal node. Literal nodes are represented just by their value in the resulted RDF file. An example  of RDF mapping skeleton is shown below.
 
