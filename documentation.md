@@ -133,13 +133,6 @@ Preview area is located on the right part of transformation window. You can see 
 ![Transformation metadata](/static/images/documentation/transformmetadata.png)
 <p align="center">Figure 15: Transformation Creation Window</p>
 
-You can see the **Transform data** ![Transform data](/static/images/documentation/transformdata.png)button on the bottom right corner. By clicking on it you are presented with the following options below. 
-
-![Transform your data] (/static/images/documentation/executedownload.png)
-<p align="center">Figure 16: Transformed files download options</p>
-
-For "Execute and retrieve", you will get the new CSV with your transformation performed to it, while for "Download executable", you will get the JAR executable file with the transformation performed on it.
-
 ###  <a name="transform_pipeline"></a>Constructing Transformation Pipeline
 
 Data cleaning and transformation in DataGraft platform is performed with help of a “pipeline” concept.  To begin with, each single transformation step is defined as a pipe – a function that performs simple data conversion on its input. The great fact about these functions is that they may be combined together in a such way, that the output of one pipe acts as an input for another. Obviously, the input/output data, that travels through this pipeline is dataset being transformed. This way of composing operations gives a great flexibility and allows to perform rather complex data conversions.
@@ -336,7 +329,7 @@ Now you can start to create, edit and remove RDF nodes and their properties. The
 After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
 
  
-![Apply transformation](/static/images/documentation/transform.png)
+![Apply transformation](/static/images/documentation/executedownload.png)
 
 1. Execute and save. By pressing this button you can publish transformed data as a data page 
 2. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
