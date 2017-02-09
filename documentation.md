@@ -13,8 +13,7 @@ weight: 2
       * [Create File Page](#create_file_page)      
       * [Create SPARQL End Point Page](#create_sparql_end_point_page)      
       * [SPARQL query](#add_sparql_query)   
-3. [Publishing data](#publish)
-4. [Data cleaning and transformation](#transform)
+3. [Data cleaning and transformation](#transform)
    * [Transformation metadata](#transform_meta)
    * [Transformation preview](#transform_preview)
    * [Constructing transformation pipeline](#transform_pipeline)
@@ -64,7 +63,7 @@ The three main functions you can perform under Create Assets are:
 A file page (see Figure 3) contains information about the file assets such as file name, description, owner, last modified date, upload date, license, download link, file size.
 The filestore asset is used for storing and sharing tabular data. The data can be in Excel or CSV formats. Administration of metadata and sharing files with other users as public data is provided in the DataGraft GUI.
 
-For creating a filepage, you can either upload a new file or choose an existing file. Below is the step-by-step guide for Creating Filepage on DataGraft. You may download a simple [CSV file](https://github.com/datagraft/datagraft-reference/blob/master/files/persons-sample-data.csv) for this tutorial.
+For creating a filepage, you can either upload a new file or choose an existing file. After you uploaded your own CSV file or choose an existing file from DataGraft, you may proceed to edit the metadata of the file, as shown in Figure 5. If you choose to **Cleanup and Transform File**, you can refer to [Data cleaning and transformation](#transform) section.
 
 ![Create File Page by Uploading New File](/static/images/documentation/1.5create_file_page_uploaded_file0.png)
 <p align="center">Figure 3: Create Filepage by uploading a new file</p>
