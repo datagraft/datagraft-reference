@@ -33,7 +33,7 @@ weight: 2
       * [Creating String Transformation Functions through Graphical Interface](#utility_string)
       * [Creating and Editing Prefixers](#prefixers)
    * [Building RDF mapping](#rdf)      
-   * [Executing transformation](#apply)      
+   * [Executing transformation](#apply_tranformation)      
 
 ## <a name="datagraft_components"></a>Components in DataGraft
 DataGraft is a cloud-based service, which provides an integrated web environment for data hosting (linked data and file storage, dataset sharing, data querying) and data transformations (interactively building, modifying, and sharing of repeatable and reusable data transformations). DataGraft provides a user interface that enables user data and account management, user assets cataloguing and dataset and database management.
@@ -322,9 +322,7 @@ Now you can start to create, edit and remove RDF nodes and their properties. The
 
 ![RDF mapping skeleton](/static/images/documentation/rdfexample.png)
 
-###  <a name="rdf"></a>Executing transformation 
-
-
+###  <a name="apply_tranformation"></a>Executing transformation    
 
 After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
 
@@ -337,10 +335,9 @@ After you've completed creating transformation either with or without RDF mappin
 
 ![jar](/static/images/documentation/jar.png)
  
-
 Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
 
-### end of part
+
 
 ### <a name="data_transformations"></a>Data transformations
  Before publishing data, in most cases you will need to transform the original dataset -- clean messy data, remove unnecessary information, probably add some new data fields and sometimes convert tabular data to RDF. This sequence of operations you perform on your data to convert it to desirable form is called **data transformation**. The greatest thing about data transformations in DataGraft platform is that you may modify existing transformations, share them with other users, reuse them repeatedly on other datasets  and create new transformations by extending ones that you or other users created and shared(fork transformations).
