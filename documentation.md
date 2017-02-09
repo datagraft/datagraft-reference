@@ -78,17 +78,20 @@ For creating a filepage, you can either upload a new file or choose an existing 
 <p align="center">Figure 6: File Page Completed</p>
 
 #### <a name="create_sparql_end_point_page"></a>Create SPARQL Endpoint Page
-A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9) displays information such as description, keywords, license, provision date and the size of the data.
+Just as creating File Page, you can create a SPARQL Endpoint Page by either upload a new file or choose an existing file (Figure 7).   
 
 ![Create SPARQL endpoint: Upload or Select a file](/static/images/documentation/create_sparql_endpoint_file.png)
 <p align="center">Figure 7: Create SPARQL endpoint: Upload or Select a file</p>
 
-![Add SPARQL endpopint details](/static/images/documentation/add_sparql_endpoint_details.png)
+![Add SPARQL endpopint details](/static/images/documentation/add_sparql_endpoint_details_label.png)
 <p align="center">Figure 8: Add SPARQL endpopint details</p>
+
+A SPARQL endpoint page contains two tabs. The "Endpoint Info" tab (see Figure 9) displays information such as description, keywords, license, provision date and the size of the data.
 
 ![Finish SPARQL Endpoint](/static/images/documentation/finish_sparql_endpoint.png)
 <p align="center">Figure 9: SPARQL endpoint Completed</p>
 
+The "Querying" tab (see Figure 10) provides a searchable list of queries (including other public queries). Queries that are linked to this particular endpoint are highlighted. Each query list is presented as an expandable card, where you can click on the query listing to get more details (i.e. the description and the query text). Clicking the "Run" button executes the query on this endpoint and displays the results in a result table. It is also possible to define a new SPARQL query and run in this view.
 ![Query SPARQL Endpoint](/static/images/documentation/query_sparql_endpoint.png)
 <p align="center">Figure 10: Query SPARQL Endpoint</p>
 
