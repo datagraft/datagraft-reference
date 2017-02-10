@@ -325,17 +325,14 @@ Now you can start to create, edit and remove RDF nodes and their properties. The
 
 ###  <a name="apply_tranformation"></a>Executing transformation    
 
-After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have few options:
+After you've completed creating transformation either with or without RDF mapping part you may apply transformation to your data right in the transformation view. To do so press ![Apply transformation](/static/images/documentation/gear.png) icon. After you did this you can see a dialog, where you have two options:
 
  
 ![Apply transformation](/static/images/documentation/executedownload.png)
 
-1. Execute and save. By pressing this button you can publish transformed data as a data page 
-2. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
-3. Download executable. By pressing this button you can  download the executable jar file on your computer. This file can then be used to transform datasets locally instead of in the cloud. The JAR file can be ran by using the command line interface from the location where the file is located as follows:
+1. Execute and retreive. By pressing this button you can  download the results locally on your computer as rdf data(n-triples)
+2. Download executable. By pressing this button you can  download the executable jar file on your computer. This file can then be used to transform datasets locally instead of in the cloud. The JAR file can be ran by using the command line interface from the location where the file is located as follows:
 
 ![jar](/static/images/documentation/jar.png)
- 
-Alternatively transformations can be executed from the "Dashboard" and "Explore" views as it have been discussed in sections [Dashboard](#dashboard) and [Exploring public transformations](#explore)
 
 ### end of part
